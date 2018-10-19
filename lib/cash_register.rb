@@ -16,6 +16,10 @@ class CashRegister
     quantity == nil ? @total += price : @total += (price * quantity)
   end
 
+  def has_quantity?
+    quantity == nil ? nil : false
+  end
+
   def apply_discount
     if @discount != nil
       @total = @total - (@total * (@discount / 100.0))
